@@ -31,7 +31,7 @@ namespace Course
             Console.Write("How many items to this order? \n");
             int n = int.Parse(Console.ReadLine());
 
-            Order order = new Order(DateTime.Now, orderStatus);
+            Order order = new Order(DateTime.Now, orderStatus, client);
 
             for(int i = 0; i < n; i++)
             {

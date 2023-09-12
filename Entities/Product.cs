@@ -6,29 +6,25 @@ using System.Threading.Tasks;
 
 namespace Exercicios.Entities
 {
-    internal class Client
+    internal class Product
     {
         public string Name { get; set; }
-        public string Email { get; set; }
-        public DateTime BirthDate { get; set; }
+        public double Price { get; set; }
 
-        public Client() { }
+        public Product() { }
 
-        public Client(string name, string email, DateTime birthDate)
+        public Product(string name, double price)
         {
             Name = name;
-            Email = email;
-            BirthDate = birthDate;
+            Price = price;
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(Name);
-            sb.Append(" (");
-            sb.Append(BirthDate.ToShortDateString());
-            sb.Append(") - ");
-            sb.Append(Email);
+            sb.Append(", ");
+            sb.Append(Price);
             return sb.ToString();
         }
     }
